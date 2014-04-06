@@ -39,6 +39,22 @@ public class BerlinClockTest {
 	}
 	
 	@Test
+	public void testLightupLowerBottomLamps() {
+		assertEquals("OOOO", BerlinClock.lightupLowerBottomLamps(0));
+		assertEquals("YOOO", BerlinClock.lightupLowerBottomLamps(1));
+		assertEquals("YYOO", BerlinClock.lightupLowerBottomLamps(2));
+		assertEquals("YYYO", BerlinClock.lightupLowerBottomLamps(3));
+		assertEquals("YYYY", BerlinClock.lightupLowerBottomLamps(4));
+	}
+	
+	@Test
+	public void testLightupLowerTopLamps() {
+		assertEquals("OOOOOOOOOOO", BerlinClock.lightupLowerBottomLamps(00));
+		assertEquals("YYROOOOOOOO", BerlinClock.lightupLowerBottomLamps(15));
+		assertEquals("YYRYYRYYRYY", BerlinClock.lightupLowerBottomLamps(11));
+	}
+	
+	@Test
 	public void testMinutesToLowerLamps() {
 		assertEquals("OOOOOOOOOOO OOOO", BerlinClock.minutesToLowerLamps(00));
 		assertEquals("YYROOOOOOOO YYOO", BerlinClock.minutesToLowerLamps(17));
