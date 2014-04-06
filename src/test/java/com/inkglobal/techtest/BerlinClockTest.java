@@ -49,9 +49,9 @@ public class BerlinClockTest {
 	
 	@Test
 	public void testLightupLowerTopLamps() {
-		assertEquals("OOOOOOOOOOO", BerlinClock.lightupLowerBottomLamps(00));
-		assertEquals("YYROOOOOOOO", BerlinClock.lightupLowerBottomLamps(15));
-		assertEquals("YYRYYRYYRYY", BerlinClock.lightupLowerBottomLamps(11));
+		assertEquals("OOOOOOOOOOO", BerlinClock.lightupLowerTopLamps(00));
+		assertEquals("YYROOOOOOOO", BerlinClock.lightupLowerTopLamps(3));
+		assertEquals("YYRYYRYYRYY", BerlinClock.lightupLowerTopLamps(11));
 	}
 	
 	@Test

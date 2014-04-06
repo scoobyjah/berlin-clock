@@ -49,7 +49,7 @@ public class BerlinClock {
 			//start at one to test modulus 3
 			//In this first row the 3rd, 6th and 9th lamp are red and indicate the first quarter, half and last quarter of an hour.
 			char colour = (j % 3 ) == 0 ?  'R' : 'Y';
-			row.setCharAt(j, colour);
+			row.setCharAt(j-1, colour);
 		}
 		return row.toString();
 	}
